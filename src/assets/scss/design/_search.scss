@@ -1,0 +1,21 @@
+.stylish-input-group .form-control {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  //box-shadow: 0 0 0 0;
+  border-color: $color-gray;
+  padding: 10px;
+  line-height: 0px;
+  font-size: 17px;
+}
+
+.stylish-input-group button,
+.stylish-input-group button:hover {
+  //border: 0;
+  background: transparent;
+  line-height: 0px;
+  padding: 10px;
+  color: $color-gray;
+  border: 1px solid $color-gray;
+  border-left: 0;
+}

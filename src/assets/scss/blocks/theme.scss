@@ -1,0 +1,8 @@
+.blocks {
+  @import "info";
+  @import "item";
+  @import "delimiter";
+
+  //min-height: 500px;
+  padding-top: 20px;
+}

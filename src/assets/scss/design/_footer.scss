@@ -1,0 +1,24 @@
+.footer {
+  bottom: 0px;
+
+  .main-footer {
+    min-height: 50px;
+    padding-top: 15px;
+    margin-bottom: -20px;
+
+    background-color: $color-white;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+  }
+
+  img {
+    width: 17px;
+    margin-top: -4px;
+    margin-right: 3px;
+  }
+
+  p {
+    margin-bottom: 0px;
+    color: $color-gray;
+  }
+}

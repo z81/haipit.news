@@ -1,0 +1,87 @@
+.navbar-toggler {
+  font-size: 1.65rem;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+}
+
+.second-navigation {
+  .top-nav {
+    .nav-tabs {
+      border-bottom: 0px !important;
+    }
+    .nav-tabs .nav-item .nav-link,
+    .nav-tabs .nav-item.show .nav-link {
+      background: $color-gray;
+      margin-right: 2px;
+      color: $color-gray;
+      //text-decoration: underline;
+    }
+    .nav-tabs .nav-link {
+      border-top-right-radius: .8rem;
+      border-top-left-radius: .8rem;
+      border-color: transparent;
+    }
+    .nav-tabs .nav-link.active {
+      color: $color-white;
+      font-weight: bold;
+      background: $color-green;
+      text-decoration: none;
+    }
+    .nav-tabs .nav-link:hover {
+      text-decoration: underline;
+    }
+    .nav-tabs .nav-link.active:hover {
+      text-decoration: none;
+    }
+  }
+
+  .bottom-nav {
+    height: 41px;
+    position: relative;
+
+    .nav-tabs {
+      position: absolute;
+      bottom: 0;
+      border-bottom: 0px;
+    }
+
+    .nav-tabs .nav-link {
+      color: $color-white;
+      background: $color-green;
+      margin-right: 0px;
+      border-color: transparent;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: $color-white;
+      font-weight: bold;
+    }
+
+    .nav-tabs .nav-link.active:hover {
+      text-decoration: none;
+    }
+
+    .nav-tabs .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-tabs .nav-link {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .nav-tabs .nav-item:first-child a {
+      border-bottom-left-radius: .8rem;
+    }
+    .nav-tabs .nav-item:last-child a {
+      border-bottom-right-radius: .8rem;
+    }
+
+    .nav-tabs .nav-link:not(:first-child), .nav-tabs .nav-link:not(:last-child) {
+      border-radius: 0 0 0 0;
+    }
+  }
+
+}

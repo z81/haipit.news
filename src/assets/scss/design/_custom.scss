@@ -1,0 +1,13 @@
+html, body, a, p, h1, h2, h3, h4, h5, h6, span {
+  font-family: "Ubuntu", sans-serif;
+  color: #000;
+}
+
+a, a.page-link {
+  color: $color-blue;
+}
+
+.page-main {
+  padding-top: 80px;
+  margin-bottom: 40px;
+}

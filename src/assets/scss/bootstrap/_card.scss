@@ -1,0 +1,24 @@
+.card {
+  border: 0px solid rgba(100, 100, 100, .1);
+  .table {
+    margin-bottom: 0px;
+    width: auto;
+  }
+  @include transitions(box-shadow, 200ms);
+}
+
+.card:hover {
+  background-color: #f9f9f9;
+  outline: none;
+  z-index: 1;
+  @include box-shadow($shadow);
+  @include transitions(box-shadow, 200ms);
+}
+
+.card-text {
+  margin-bottom: .75rem;
+}
+
+.card-source {
+  min-height: 250px;
+}

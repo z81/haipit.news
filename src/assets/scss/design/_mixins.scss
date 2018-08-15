@@ -1,0 +1,11 @@
+@mixin padding($val) {
+  padding: 0;
+  margin-top: $val;
+  margin-bottom: $val;
+}
+@mixin darken($key, $value, $percents) {
+  $key: darken($value, $percents);
+}
+@mixin lighten($key, $value, $percents) {
+  $key: lighten($value, $percents);
+}

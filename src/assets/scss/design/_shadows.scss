@@ -1,0 +1,34 @@
+$shadow: 0 0 5px rgba(157, 165, 171, 0.8);
+$shadow-sm: 0 0 3px rgba(157, 165, 171, 0.5);
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transitions($mode, $time) {
+  transition: -webkit-$mode $time;
+  transition: -moz-$mode $time;
+  transition: -ms-$mode $time;
+  transition: $mode $time;
+}
+
+.shadow {
+  @include transitions(box-shadow, 200ms);
+}
+
+.shadow:hover {
+  @include box-shadow($shadow);
+  @include transitions(box-shadow, 200ms);
+}
+
+.shadow-sm:hover {
+  @include box-shadow($shadow-sm);
+  @include transitions(box-shadow, 200ms);
+}
+
+.navbar-main, .footer {
+  @include box-shadow($shadow);
+}

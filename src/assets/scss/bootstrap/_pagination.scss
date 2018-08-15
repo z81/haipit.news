@@ -1,0 +1,17 @@
+.pagination {
+
+  a, a.page-link {
+    color: darken($color-green, 10%);
+  }
+
+  .page-item.active {
+    .page-link {
+      background-color: lighten($color-green, 10%);
+      border-color: lighten($color-green, 20%);
+      &:hover {
+        background-color: $color-green;
+      }
+    }
+  }
+
+}

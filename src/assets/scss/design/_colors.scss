@@ -1,0 +1,57 @@
+$colors: (
+        "gray": $color-gray,
+        "blue": $color-blue,
+        "lilac": $color-lilac,
+        "orange": $color-orange,
+        "green": $color-green,
+        "white": $color-white,
+        "black": $color-black
+);
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background-color: $value;
+    &.darken {
+      background-color: darken($value, 30%);
+    }
+    &.dark {
+      background-color: darken($value, 10%);
+    }
+    &.light {
+      background-color: lighten($value, 10%);
+    }
+    &.lighten {
+      background-color: lighten($value, 20%);
+    }
+  }
+  .border-#{$key} {
+    border-color: $value;
+    &.darken {
+      border-color: darken($value, 30%);
+    }
+    &.dark {
+      border-color: darken($value, 10%);
+    }
+    &.light {
+      border-color: lighten($value, 10%);
+    }
+    &.lighten {
+      border-color: lighten($value, 20%);
+    }
+  }
+  .text-#{$key} {
+    color: $value;
+    &.darken {
+      color: darken($value, 30%);
+    }
+    &.dark {
+      color: darken($value, 10%);
+    }
+    &.light {
+      color: lighten($value, 10%);
+    }
+    &.lighten {
+      color: lighten($value, 20%);
+    }
+  }
+}
