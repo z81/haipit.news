@@ -2,7 +2,7 @@
     <transition name="fade">
         <div class="col-12">
             <div class="card">
-                <div class="card-block p-4">
+                <div class="card-block p-4 block-item">
                     <div class="card-title">
                         <h5 class="news-link">
                             <a target="_blank" class="last"
@@ -15,9 +15,7 @@
                     <div class="card-text hidden-md-down">
                         <span class="text-success">{{ decodeURIComponent(item.url) }}</span>
                     </div>
-                    <div class="card-text news-text" v-if="item.description">
-                        {{ decodeHtml(item.description) }}
-                    </div>
+                    <div class="card-text news-text" v-if="item.description" v-html="decodeHtml(item.description)"></div>
                     <div class="card-text">
                         <table class="table table-sm table-bordered">
                             <tr>
@@ -26,7 +24,8 @@
                                         (item.clicks !== undefined)
                                         ? decodeJson(item.clicks)
                                         : '0'
-                                        }}</span>
+                                        }}
+                                    </span>
                                 </td>
                                 <td>
                                     <router-link :to="{path: '/news?src=' + item.id_source}">

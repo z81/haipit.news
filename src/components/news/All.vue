@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row blocks">
         <post v-for="item in posts" v-bind:item="item"/>
         <div class="col-12" v-show="!found">
             <h2>No results were found. Try changing the keyword!</h2>

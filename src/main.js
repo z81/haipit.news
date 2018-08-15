@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
 import DateFns from 'date-fns'
 import Paginate from 'vuejs-paginate'
+import Striptags from 'striptags';
 
 // Main application
 import App from './App.vue'
@@ -62,6 +63,6 @@ Vue
 
 Vue.component('paginate', Paginate);
 
-const app = new Vue({
+new Vue({
     render: h => h(App), router: router
 }).$mount('#app');
