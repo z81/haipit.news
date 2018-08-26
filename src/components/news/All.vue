@@ -47,20 +47,18 @@
             page: Number,
         },
         methods: {
-            getNews: function () {
+            getNews: async () => {
                 // Renew limit and offset by page number
                 this.getLimits();
-                this.$http.get(`${this.API}/news?limit=` + this.limit + '&offset=' + this.offset)
-                    .then(response => {
-                        this.posts = response.data.result;
-                    })
+                const { data } = await this.$http.get(`${this.API}/news?limit=${this.limit}&offset=${this.offset}`)
+                this.posts = data.result;
             },
-            getLimits: function () {
+            getLimits: () => {
                 if (this.page !== undefined) this.currentPage = this.page;
                 this.limit = 30;
                 this.offset = this.currentPage * this.limit;
             },
-            clickCallback: function (pageNum) {
+            clickCallback: (pageNum) => {
                 this.currentPage = pageNum;
                 this.getNews();
             }
